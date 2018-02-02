@@ -213,15 +213,32 @@ $jelszo.=chr(rand($e,$u));
 echo "<font size=20 >".$jelszo."</font>";
 
 ?> 
+<br>ORD és char <br>
+<?php 
+echo ord("a")."<br />";
+echo chr(97);
+?>
 
-
-
+<br>
 <?php 
 $t=array(20,32,45,91);
-echo implode($t, ","); 
+echo implode($t, ",");
+echo "<br>"; 
+$x = array(20,34,56,77,81);
+echo implode($x,",");
 $t=explode("20-34-56-77-81","-"); 
 $t=explode("-","20-34-56-77-81");
-echo $t[1];
+
+?> 
+<br>include<br>
+<?php 
+ 
+switch( rand(0,2) ){
+case 0 : include("tavi_mese.txt"); break; 
+case 1 : include("hegyi_mese.txt");break; 
+case 2 : include("mezei_mese.txt"); break; 
+} 
+
 ?> 
 
 
